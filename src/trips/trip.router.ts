@@ -1,9 +1,8 @@
 import express  from'express';
-const tripRouter = express.Router();
+const router = express.Router();
 
-tripRouter.get('alltrip', (req,res)=>{
-    console.log('this router trip');
-    
+router.get('/api/trip', (req,res)=>{
+    res.status(200).send({message:'this router trip'});
 })
 
-module.exports = tripRouter;
+export {router as tripRouter};
