@@ -8,5 +8,5 @@ var express_1 = __importDefault(require("express"));
 var router = express_1.default.Router();
 exports.tripRouter = router;
 router.get('/api/trip', function (req, res) {
-    console.log('this router trip');
+    res.status(200).send({ message: 'this router trip' });
 });
